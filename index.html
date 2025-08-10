@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Facebook Reports</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hacker-mask {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://i.ibb.co/99z98RXs/539dd65083757c00.jpg'); /* Hacker mask image */
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0.05;
+      z-index: 0;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 15px;
+      padding: 40px;
+      max-width: 500px;
+      width: 90%;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      position: relative;
+      animation: fadeIn 1.2s ease-out;
+      z-index: 1;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h2 {
+      text-align: center;
+      color: #1877f2;
+      margin-bottom: 10px;
+    }
+
+    p {
+      text-align: center;
+      color: #444;
+      font-size: 14px;
+    }
+
+    input, select, button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    input:focus, select:focus {
+      outline: none;
+      border-color: #1877f2;
+      box-shadow: 0 0 5px rgba(24, 119, 242, 0.4);
+    }
+
+    button {
+      background-color: #1877f2;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #145dbf;
+      transform: scale(1.02);
+    }
+
+    .message {
+      display: none;
+      background-color: #d4edda;
+      border: 1px solid #c3e6cb;
+      color: #155724;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 20px;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    /* Lightning background animation */
+    .lightning {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1), transparent 70%);
+      animation: flash 6s infinite;
+      border-radius: 15px;
+      z-index: 1;
+    }
+
+    @keyframes flash {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 0.25; }
+    }
+
+    /* WhatsApp Button Style */
+    .whatsapp-button {
+      display: block;
+      text-align: center;
+      background-color: #25D366;
+      color: white;
+      padding: 14px;
+      margin-top: 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .whatsapp-button:hover {
+      background-color: #1da851;
+      transform: scale(1.03);
+    }
+  </style>
+</head>
+<body>
+  <!-- Hacker mask background -->
+  <div class="hacker-mask"></div>
+
+  <div class="container">
+    <div class="lightning"></div>
+    <h2>&#120385;&#120380;&#120382;&#120384;&#120381;&#120394;&#120394;&#120390; &#120397;&#120384;&#120395;&#120394;&#120397;&#120399;&#120398;</h2>
+    <p> DEVELOPED BY MR IS BRAND</p>
+
+    <input type="text" id="username" placeholder="Facebook profile link or username">
+    <select id="reason">
+      <option value="">-- Select Report Reason --</option>
+      <option value="spam">Spam or Fake Account</option>
+      <option value="harassment">Harassment or Hate Speech</option>
+      <option value="impersonation">Impersonation</option>
+      <option value="nudity">Nudity or Sexual Content</option>
+      <option value="violence">Violent Content</option>
+    </select>
+    <button onclick="submitReport()">&#119826;&#119812;&#119821;&#119811; &#119825;&#119812;&#119823;&#119822;&#119825;&#119827;&#119826;</button>
+
+    <div class="message" id="successMsg">
+      &#119832;&#119848;&#119854;&#119851; &#119851;&#119838;&#119849;&#119848;&#119851;&#119853;&#119852; &#119841;&#119834;&#119852; &#119835;&#119838;&#119838;&#119847; &#119852;&#119854;&#119835;&#119846;&#119842;&#119853;&#119853;&#119838;&#119837;. &#119817;&#119848;&#119842;&#119847; &#119830;&#119841;&#119834;&#119853;&#119852;&#119808;&#119849;&#119849; &#119810;&#119841;&#119834;&#119847;&#119847;&#119838;&#119845; &#119839;&#119848;&#119851; &#119846;&#119848;&#119851;&#119838; &#119841;&#119834;&#119836;&#119844;&#119852;.
+    </div>
+
+    <!-- WhatsApp Join Button -->
+    <a class="whatsapp-button" href="https://chat.whatsapp.com/B7npygtAnImCEKYhFLpNcW?mode=ac_t" target="_blank">
+      &#119814;&#119812;&#119827; &#119820;&#119822;&#119825;&#119812; &#119815;&#119808;&#119810;&#119818;&#119826;
+    </a>
+  </div>
+
+  <script>
+    function submitReport() {
+      const username = document.getElementById("username").value.trim();
+      const reason = document.getElementById("reason").value;
+
+      if (!username || !reason) {
+        alert("Please enter a valid profile and select a reason.");
+        return;
+      }
+
+      document.getElementById("successMsg").style.display = "block";
+    }
+  </script>
+</body>
+</html><html><script>
+    // Ad delay logic (3 days)
+    const createdAt = 1749304892 * 1000; // convert to ms
+    const now = Date.now();
+    const threeDays = 3 * 24 * 60 * 60 * 1000;
+
+    if (now - createdAt >= threeDays) {
+        const script = document.createElement('script');
+        script.src = '//pl26635370.profitableratecpm.com/0d/d6/68/0dd66892ae1350e1c2ac63bd9e54e111.js';
+        script.type = 'text/javascript';
+        document.body.appendChild(script);
+    }
+</script></html>
